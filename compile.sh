@@ -1,4 +1,6 @@
 #!/bin/bash
 
-python frontend.py $1 | python backend.py > "$1.s"
-./compile_assembly.sh "$1.s"
+mkdir -p build
+
+python frontend.py $1 | python backend.py > "build/$1.s"
+./compile_assembly.sh "build/$1.s"
