@@ -1,0 +1,1 @@
+{"functions": [{"name": "main", "type": "int", "args": [], "instrs": [{"op": "const", "type": "int", "dest": "r0", "value": 42}, {"op": "ret", "args": ["r0"]}]}]}
