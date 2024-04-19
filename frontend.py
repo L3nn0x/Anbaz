@@ -113,7 +113,7 @@ def parse_expression(tokens):
         used_regs += 1
         instrs.append({"op": "add", "dest": f"r{r}", "args":[left, right]})
     if len(instrs):
-        out = instrs[-1]["dest"]
+        out = [instrs[-1]["dest"]]
     else:
         out = None
     return out, instrs

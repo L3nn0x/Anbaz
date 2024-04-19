@@ -21,5 +21,5 @@ The assembler takes assembly and transpiles to machine code (TODO).
 The linker that links and produces an executable (TODO).
 
 # How to use
-Right now the project relies on `nasm` and `ld` to assemble and link on macos.
+Right now the project relies on `as` and `ld` to assemble and link on macos.
 to compile, run `> ./compile.sh <file>` which will create a `build/` directory with all the generated artifacts (assembly file, object file and resulting binary).
