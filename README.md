@@ -12,7 +12,7 @@ The target for the language is for now a subset of C. Changes will happen later 
 # The compiler
 The compiler is currently bootstraped with python code and is split in 2:
 - The frontend that takes Anbaz and emits [Bril](https://capra.cs.cornell.edu/bril/intro.html) (in progress).
-- The backend that takes a Bril output and emits assembly (currently targetting marm64 and maybe x64 later) (TODO).
+- The backend that takes a Bril output and emits assembly (currently targetting marm64 and maybe x64 later) (in progress).
 
 # The assembler
 The assembler takes assembly and transpiles to machine code (TODO).
@@ -23,3 +23,5 @@ The linker that links and produces an executable (TODO).
 # How to use
 Right now the project relies on `as` and `ld` to assemble and link on macos.
 to compile, run `> ./compile.sh <file>` which will create a `build/` directory with all the generated artifacts (assembly file, object file and resulting binary).
+
+You can also run the tests with `> run_tests.sh`
