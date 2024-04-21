@@ -2,7 +2,7 @@
 
 for file in tests/*.a; do
     echo -n -e "testing $file...\t"
-    frontend_output=$(python frontend.py $file)
+    frontend_output=$(python -m frontend $file)
     frontend_expected=$(<"$file.ir")
     if [ "$frontend_output" != "$frontend_expected" ]; then
         echo -e "\033[0;31mfrontend FAIL\033[0m"
