@@ -10,7 +10,7 @@ for file in tests/*.a; do
         continue
     fi
 
-    backend_output=$(cat "$name.ir" | python backend.py)
+    backend_output=$(cat "$name.ir" | python -m backend)
     backend_expected=$(<"$name.s")
     if [ "$backend_output" != "$backend_expected" ]; then
         echo -e "\033[0;31mbackend FAIL\033[0m"
