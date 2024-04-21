@@ -2,5 +2,7 @@
 
 mkdir -p build
 
-python -m frontend $1 | python backend.py > "build/$1.s"
-./compile_assembly.sh "build/$1.s"
+name="$1"
+name="$(basename "${name%.*}")"
+python -m frontend $1 | python backend.py > "build/$name.s"
+./compile_assembly.sh "build/$name.s"
